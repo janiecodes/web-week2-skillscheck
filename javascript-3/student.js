@@ -16,7 +16,7 @@ let yourName = "Janie"
 
 // Code Here
 function setGroceryListTitle(x){
-    return `x's Grocery List`
+    return `${x}'s Grocery List`
 }
 //////////////////STEP 4////////////////////
 //Create a function called 'addItem' that takes in one parameter called 'item'. Add the item parameter to the end of the groceries array created above. Inside of addItem, 
@@ -27,13 +27,14 @@ function addItem(item){
     groceries.push(item)
     displayData(addItem)
 }
+
 //////////////////STEP 5////////////////////
 //Create a function called 'removeItem' that takes in one parameter called 'index'. Inside of the removeItem function, remove the item that corresponds to 
 //the index parameter from the groceries array above by using splice. Then, invoke the displayData() function inside of your removeItem function.
 
 // Code Here
 function removeItem(index){
-    for(let i = 0; let i < groceries.length; i++){
+    for(let i = 0; i < groceries.length; i++){
         if(index === groceries[i]){
             groceries.splice(i, 1)
         }
@@ -51,7 +52,7 @@ function checkGroceryCount(arr){
     if(arr.length >= 5){
         return 'That looks like a big trip'
     }else if(arr.length < 5 && arr.length > 1){
-        return arr.length
+        return arr.length + ' items'
     }else{
         return '1 item'
     }
