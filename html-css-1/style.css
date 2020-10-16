@@ -7,7 +7,7 @@ header {
     display: flex;
     width: 100%;
     background-color: grey;
-    height: 8vh;
+    height: 7vh;
 
 }
 
@@ -30,7 +30,7 @@ header {
     font-size: 14px;  
     color: white;
     margin-top: 10px;
-    padding-right: 30px;
+    padding-right: 35px;
     
 
 }
@@ -144,6 +144,6 @@ img {
 
 footer {
     background-color: indigo;
-    height: 12vh;
+    height: 13vh;
     width: 100%;
 }
