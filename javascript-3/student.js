@@ -25,7 +25,7 @@ function setGroceryListTitle(x){
 // Code Here
 function addItem(item){
     groceries.push(item)
-    displayData(addItem)
+    displayData()
 }
 
 //////////////////STEP 5////////////////////
@@ -39,7 +39,7 @@ function removeItem(index){
             groceries.splice(i, 1)
         }
     }
-    displayData(removeItem)
+    displayData()
 }
 //////////////////STEP 6////////////////////
 //Create a function called 'checkGroceryCount'. Inside of checkGroceryCount, you're going to check the total number of groceries in your groceries array using .length. 
@@ -50,11 +50,11 @@ function removeItem(index){
 // Code Here
 function checkGroceryCount(arr){
     if(arr.length >= 5){
-        return 'That looks like a big trip'
+    return 'That looks like a big trip'
     }else if(arr.length < 5 && arr.length > 1){
-        return arr.length + ' items'
+    return arr.length + ' items'
     }else{
-        return '1 item'
+    return '1 item'
     }
 }
 //////////////////STEP 6////////////////////

@@ -16,18 +16,19 @@ let faveColors = ['yellow', 'lavender', 'red']
 // The profileImage key value should be a method that returns this url `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`.
 
 // CODE HERE
-const { firstName, superHeroName, homeTown, superPowers, superPowerXP, profileImage } = me
+let me = {
+    firstName: "Janie",
+    superHeroName: "Kimchi Kim",
+    homeTown: "Killeen",
+    superPowers: ["Mind Reading", "Super Strength", "Kimchi Bomb"],
+    superPowerXP: function(){
+        Math.floor(Math.random() * 100) + 1
+    },
+    profileImage: function(){
+        return `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`
+    }
+}
 
-me.firstName = "Janie"
-me.superHeroName = "Kimchi Kim"
-me.homeTown = "Killeen"
-me.superPowers = ["Mind Reading", "Super Strength", "Kimchi Bomb"]
-me.superPowerXP = function(){
-    Math.floor(Math.random() * 100) + 1
-}
-me.profileImage = function(){
-    return `https://randomuser.me/api/portraits/med/lego/${Math.floor(Math.random() * 10) + 1 }.jpg`
-}
 
 
 //////////////////Step 3////////////////////
@@ -45,18 +46,19 @@ let homeTown = me.homeTown
 //colors by using splice to trim the array to just 3 colors. 
 
 // Next, create a for loop to loop over the remaining three colors. If any of the colors is 'blue', change it's value to '#4D4DFF' 
-//(which is just a more appealing shade of blue). Outside of the for loop but still inside of setColor, invoke the function called 'background' which will take in three arguments. 
+//(which is just a more appealing shade of blue). Outside of the for loop but still inside of setColor, 
+//invoke the function called 'background' which will take in three arguments. 
 //These arguments should be the three items remaining in your colors array. 
 
 // CODE HERE
 function setColor(arr){
-    return arr.splice(3)
+    arr.splice(3)
     for(let i = 0; i < arr.length; i++){
         if(arr[i] === 'blue'){
-            arr[i] = #4D4DFF
+            arr[i] = '#4D4DFF'
         }
     }
-    background(arr0, arr1, arr2)
+    background(arr[0], arr[1], arr[2])
 }
 
 
@@ -80,7 +82,7 @@ function setPowers(arr){
 // CODE HERE
 function redactInfo(obj){
     for(let key in obj){
-        key === 'redacted'
+        obj[key] = 'redacted'
     }
     redacted()
 }
